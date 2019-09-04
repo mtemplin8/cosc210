@@ -27,7 +27,7 @@ public class Question {
     * Use the given prompt with all the other default attributes.
     */
    public Question(String prompt) {
-       this();
+       this();  // calls the default constructor that takes no params.
        this.prompt = prompt;
    }
    
@@ -42,15 +42,25 @@ public class Question {
    }
    
    /**
-    * Displays the prompt for the main question.
+    * Displays the prompt for the main question and scale hint.
     */
    
    public void display() {
-       System.out.println(prompt + "[" + minScale + "-" + maxScale + "]"); 
+       System.out.println(prompt + "[" + minScale + "-" + maxScale + "]:"); 
    }
    
    public void displaySecond(){
        System.out.println(secondPrompt);  
    }
+   
+   /**
+    * Returns true if the given response is within the range.
+    * @param scaleResponse - the user supplied response.
+    * @return true if scaleResponse between min and max.
+    */
+
+    public boolean checkResponse(int scaleResponse) {
+        return scaleResponse>=minScale&&scaleResponse<=maxScale;
+    }
    
 }
