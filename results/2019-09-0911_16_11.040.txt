@@ -1,0 +1,9 @@
+5|I am still new at Netbeans, but I am gradually learning more about it.
+2|I have not really done anything with different classes, we only touched on objects for a very short time. I do understand types.
+2|I have always found methods confusing and hard to follow. I am more comfortable with keeping everything in the main method.
+7|I have always found this easy in Java. 
+4|I am comfortable with if statements and switches, but I sometimes struggle with loops.
+3|I have not had much time to mess with Arrays. I have used small, basic arrays, but I have never dealt with arrays of any great size.
+1|I have never done this before.
+1|I have never used packages before.
+5|I have done this several times with different assignments last semester. I have also helped my classmates with debugging.
