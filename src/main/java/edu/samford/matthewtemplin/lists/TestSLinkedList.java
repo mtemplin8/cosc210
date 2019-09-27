@@ -34,6 +34,9 @@ public class TestSLinkedList {
         System.out.println("toString=='BHM, ATL':   " + list);
         System.out.println("size==2:                 " + ratings.size());
         System.out.println("toString=='10, 7':   " + ratings);
+        
+        SNode<String> bhmnode = list.find("BHM");
+        System.out.println(bhmnode.element());
     }
   
 }

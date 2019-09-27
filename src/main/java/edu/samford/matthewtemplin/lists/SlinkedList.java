@@ -87,6 +87,35 @@ public class SlinkedList<T> {
          return newnode;
      }
      
+     /**
+      * Searches the entire linked list until the searchdata is found.
+      * @param searchdata
+      * @return the SNode containing the searchdata or null if not found.
+      */
+     public SNode<T> find(T searchdata){
+         SNode<T> cur = head;
+         while(cur!=null){
+           if(cur.element().equals(searchdata)){
+               return cur;
+           }  
+         }
+         return null;
+     }
+     
+     /**
+      * Finds and removes the FIRST occurrence of the given data
+      * @param searchdata
+      * @return the removed node if found otherwise null
+      */
+     
+     public SNode<T> remove(T searchdata){
+         SNode<T> doomed = find(searchdata);
+         if(doomed!=null){
+             remove(doomed);
+         }
+         return doomed;
+     }
+     
      public int size(){
          return size;
      }
@@ -109,5 +138,9 @@ public class SlinkedList<T> {
          
          return out;
      }
+
+    private void remove(SNode<T> doomed) {
+        // difficult to implement
+    }
     
 }
