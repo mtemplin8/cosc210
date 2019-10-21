@@ -5,11 +5,14 @@
  */
 package edu.samford.matthewtemplin.lists;
 
+import java.util.Iterator;
+import java.util.function.Consumer;
+
 /**
  *
  * @author kartoone
  */
-public class DLinkedList<T> {
+public class DLinkedList<T> implements Iterable<T>{
     
     private DNode<T> header;   // "special" node without data that marks beginning of list
     private DNode<T> trailer;  // "special" node without data that marks end of list
@@ -206,6 +209,16 @@ public class DLinkedList<T> {
     public void replace(DNode<T> p, T e) {
         DNode<T> pos = (DNode<T>) p;
         pos.setElement(e);
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new DLinkedListIterator<>(this);
+    }
+
+    @Override
+    public void forEach(Consumer action) {
+        Iterable.super.forEach(action); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
