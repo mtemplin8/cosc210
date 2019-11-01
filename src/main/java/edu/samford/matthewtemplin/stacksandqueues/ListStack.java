@@ -49,6 +49,12 @@ public class ListStack <T> implements Stack<T>{
     public boolean isEmpty() {
         return theStack.isEmpty();
     }
+
+    @Override
+    public String toString() {
+        return theStack.toString();
+    }
     
+ 
     
 }
